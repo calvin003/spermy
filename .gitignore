@@ -1,0 +1,16 @@
+# Secrets — never commit. ANTHROPIC_API_KEY lives in Vercel env vars / a local .env
+.env
+.env.*
+*.local
+
+# Vercel
+.vercel
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
