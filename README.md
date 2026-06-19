@@ -42,8 +42,10 @@ insert leagues, not read anyone's data.
 
 ## Config
 
-- **Model** — `MODEL` in `api/chat.py` (`claude-opus-4-8`). For a snappier and
-  cheaper demo, switch to `claude-haiku-4-5`.
+- **Model** — `MODEL` in `api/chat.py` (`claude-haiku-4-5` — fast, cheap, stays
+  under Vercel's default function timeout). For the most capable host, switch to
+  `claude-opus-4-8` (and add a `functions` `maxDuration` in `vercel.json` if
+  replies run long).
 - **Join link domain** — `WEB_BASE` (`https://swimmers.live`). The link works as
   a web join today and upgrades to a native iOS App Clip card once the
   apple-app-site-association is deployed at `swimmers.live/.well-known/` and the

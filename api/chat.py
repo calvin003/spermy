@@ -22,9 +22,10 @@ from http.server import BaseHTTPRequestHandler
 import anthropic
 
 # --- Claude config -----------------------------------------------------------
-# Opus 4.8 is the most capable model. For a snappier / cheaper demo you can
-# switch this to "claude-haiku-4-5" (one line, no other changes needed).
-MODEL = "claude-opus-4-8"
+# Haiku 4.5 is fast and cheap — keeps replies well under Vercel's default
+# function timeout, ideal for a friend-facing demo. For the most capable host,
+# switch to "claude-opus-4-8" (and add a maxDuration if replies run long).
+MODEL = "claude-haiku-4-5"
 MAX_TOKENS = 1024
 MAX_HISTORY = 20          # cap the turns we replay, to bound tokens
 MAX_TOOL_HOPS = 4         # safety bound on the tool-use loop
